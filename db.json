@@ -1,0 +1,74 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "id": 2,
+      "mobile": "6545",
+      "address": "Karlapalem"
+    },
+    {
+      "id": 3,
+      "mobile": "6545",
+      "address": "Karlapalem"
+    },
+    {
+      "id": 4,
+      "mobile": "34546",
+      "address": "ehrt"
+    },
+    {
+      "id": 5,
+      "mobile": "6456",
+      "address": "tdcgfhd"
+    },
+    {
+      "id": 6,
+      "name": "wer",
+      "mobile": "sfer345435",
+      "address": "er"
+    },
+    {
+      "id": 7,
+      "name": "tested",
+      "mobile": "123456789",
+      "address": "thrdf"
+    }
+  ],
+  "signup": [
+    {
+      "name": "test",
+      "mobile": "123456789",
+      "email": "data@gmail.com",
+      "password": "12345",
+      "id": 1
+    },
+    {
+      "name": "data",
+      "mobile": "123456789",
+      "email": "test@gmail.com",
+      "password": "67890",
+      "id": 2
+    },
+    {
+      "name": "tested",
+      "mobile": "65354354",
+      "email": "first@gmail.com",
+      "password": "34567",
+      "id": 3
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

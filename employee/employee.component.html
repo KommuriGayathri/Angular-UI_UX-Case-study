@@ -1,0 +1,64 @@
+<!-- <p>employee works!</p> -->
+<nav class="navbar navbar-light p-1 mb-1 bg-secondary text-white">
+  <div class="container-fluid">
+    <h4>Employee Record</h4>
+    <div class="d-flex">
+      <!-- <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">Add Employee</button> -->
+      <button type="button" class="btn btn-primary " data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Add Employee
+      </button>
+      <button routerLink="/login" class="btn btn danger mx-3">Logout</button>
+    </div>
+  </div>
+</nav>
+
+<table class="table mt-2">
+  <thead>
+    <tr>
+      <th scope="col">Employee ID</th>
+      <th scope="col">Name</th>
+      <th scope="col">Mobile </th>
+      <th scope="col">Address</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let data of allEmployeeData">
+      <td>{{data.id}}</td>
+      <td>{{data.name}}</td>
+      <td>{{data.mobile}}</td>
+      <td>{{data.address}}</td>
+      <!-- <td><button class="btn btn-primary">Edit</button></td> -->
+      <td><button class="btn btn-info" (click)="deleteEmpTo(data)">delete</button></td>
+    </tr>
+  </tbody>
+</table>
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Employee Details</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="formValue">
+          <div class="mb-3">
+            <label class="col-form-label">Name:</label>
+            <input type="text" class="form-control" placeholder="Enter Name" formControlName="name" id="recipient-name">
+          </div>
+          <div class="mb-3">
+            <label class="col-form-label">Mobile:</label>
+            <input type="text" class="form-control" placeholder="Enter Mobile Number" formControlName="mobile" id="recipient-Mobile">
+          </div>
+          <div class="mb-3">
+            <label class="col-form-label">Address:</label>
+            <textarea class="form-control" placeholder="Enter Address" formControlName="address" id="message-text"></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" (click)="addEmp()">add changes</button>
+      </div>
+    </div>
+  </div>
+</div>
